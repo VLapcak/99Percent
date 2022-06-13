@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view"
-    >
+    tools:showIn="navigation_view">
 
-    <item android:title="Difficulty">
+    <item android:title="@string/difficulty">
         <menu>
             <item
                 android:id="@+id/nav_diff_easy"
                 android:icon="@drawable/diff_easy_icon"
-                android:title="Easy" />
+                android:title="@string/easy" />
 
             <item
                 android:id="@+id/nav_diff_hard"
                 android:icon="@drawable/diff_hard_icon"
-                android:title="Hard" />
+                android:title="@string/hard" />
 
         </menu>
     </item>
 
-    <item android:title="Music">
+    <item android:title="@string/music">
         <menu>
             <item
                 android:id="@+id/nav_music_on"
                 android:icon="@drawable/sound_on_icon"
-                android:title="Music ON" />
+                android:title="@string/music_on" />
 
             <item
                 android:id="@+id/nav_music_off"
                 android:icon="@drawable/sound_off_icon"
-                android:title="Music OFF" />
+                android:title="@string/music_off" />
 
         </menu>
     </item>
 
 
-    <item android:title="Progress">
+    <item android:title="@string/progress">
         <menu>
             <item
                 android:id="@+id/nav_resetProgress"
                 android:icon="@drawable/reset_progress_icon"
-                android:title="Reset Progress" />
+                android:title="@string/reset_progress" />
 
         </menu>
     </item>
 
-    <item android:title="About">
+    <item android:title="@string/about">
         <menu>
             <item
                 android:id="@+id/nav_about_game"
                 android:icon="@drawable/question_icon"
-                android:title="How to play" />
+                android:title="@string/how_to_play" />
 
         </menu>
     </item>

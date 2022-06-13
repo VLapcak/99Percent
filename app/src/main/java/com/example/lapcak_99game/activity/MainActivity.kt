@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var wordVM: WordViewModel
 
-    private var gems: Int = 0
+    //private var gems: Int = 0
     private var difficulty: Int = 0
     private var music: Int = 0
 
@@ -46,24 +46,31 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(Gravity.LEFT)
         }
 
+
+        updateSettingsBar(navView)
+
         navView.setNavigationItemSelectedListener {
             when(it.itemId)
             {
                 R.id.nav_diff_easy -> {
                     Toast.makeText(applicationContext, "Easy difficulty selected", Toast.LENGTH_SHORT).show()
                     saveData("difficulty", 0)
+                    updateSettingsBar(navView)
                 }
                 R.id.nav_diff_hard -> {
                     Toast.makeText(applicationContext, "Hard difficulty selected", Toast.LENGTH_SHORT).show()
                     saveData("difficulty", 1)
+                    updateSettingsBar(navView)
                 }
                 R.id.nav_music_on -> {
                     Toast.makeText(applicationContext, "Music ON", Toast.LENGTH_SHORT).show()
                     saveData("music", 0)
+                    updateSettingsBar(navView)
                 }
                 R.id.nav_music_off -> {
                     Toast.makeText(applicationContext, "Music OFF", Toast.LENGTH_SHORT).show()
                     saveData("music", 1)
+                    updateSettingsBar(navView)
                 }
                 R.id.nav_resetProgress -> {
                     Toast.makeText(applicationContext, "Progress Reset", Toast.LENGTH_SHORT).show()
@@ -71,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     saveData("gems", 0)
                 }
             }
+
             true
         }
 
@@ -92,30 +100,43 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadData(prefsName: String, value: Int)
+    private fun loadData()
     {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        //gems = sharedPreferences.getInt("Gem_KEY", 0)
+        difficulty = sharedPreferences.getInt("Diff_KEY", 0)
+        music = sharedPreferences.getInt("Music_KEY", 0)
+    }
 
-        when (prefsName)
-        {
-            "gems" -> gems = sharedPreferences.getInt("Gem_KEY", 0)
-            "difficulty" -> difficulty = sharedPreferences.getInt("Diff_KEY", 0)
-            "music" -> music = sharedPreferences.getInt("Music_KEY", 0)
-            else -> println("error has occurred")
-        }
+    private fun updateSettingsBar(navigationView: NavigationView)
+    {
+        loadData()
+        navigationView.menu.findItem(R.id.nav_music_on).isChecked = false
+        navigationView.menu.findItem(R.id.nav_music_off).isChecked = false
+        navigationView.menu.findItem(R.id.nav_diff_easy).isChecked = false
+        navigationView.menu.findItem(R.id.nav_diff_hard).isChecked = false
 
+        if (music == 0)
+            navigationView.menu.findItem(R.id.nav_music_on).isChecked = true
+        else
+            navigationView.menu.findItem(R.id.nav_music_off).isChecked = true
+
+        if (difficulty == 0)
+            navigationView.menu.findItem(R.id.nav_diff_easy).isChecked = true
+        else
+            navigationView.menu.findItem(R.id.nav_diff_hard).isChecked = true
     }
 
     //endregion
 
     private fun playMusic() {
-        val musicON = true
+        val musicON = music
         var player: MediaPlayer? = null
-        if (musicON && player == null)
+        if (musicON == 0 && player == null)
         {
             player = MediaPlayer.create(this, R.raw.bg_music)
             player!!.isLooping = true
-            player!!.start()
+            player.start()
         }
     }
 }

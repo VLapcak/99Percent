@@ -5,7 +5,7 @@ forest
 park
 spring
 tree
-
+path
 
 
 heart
@@ -13,9 +13,29 @@ uniza
 sunset
 reflection
 grass
+paving
+building
 
 
 
+rectorate
+school
+uniza
+zilina
+faculty
+aula
+lamp
+entry
 
 
+opatia
+croatia
+town
+sunny
+people
+clouds
+stairs
+tent
+mountain
+old
 

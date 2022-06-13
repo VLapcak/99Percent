@@ -18,7 +18,6 @@ class LevelSelector : AppCompatActivity() {
     lateinit var pictureList: ArrayList<Picture>
     lateinit var pictureAdapter: PictureAdapter
     lateinit var wordVM: WordViewModel
-    private var sum: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +30,8 @@ class LevelSelector : AppCompatActivity() {
         pictureList = ArrayList()
         pictureList.add(Picture(R.drawable.church, "Level 1", 0, 1))
         pictureList.add(Picture(R.drawable.uniza_heart, "Level 2", 0, 2))
+        pictureList.add(Picture(R.drawable.rectorate, "Level 3", 0, 3))
+        pictureList.add(Picture(R.drawable.opatia, "Level 4", 0, 4))
         for (i in 1..pictureList.size) {getPercentagesByLevel(i)}
 
 

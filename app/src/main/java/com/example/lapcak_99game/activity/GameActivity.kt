@@ -25,8 +25,11 @@ class GameActivity : AppCompatActivity() {
     lateinit var wasGuessed: BooleanArray
     lateinit var binding: ActivityGameBinding
     lateinit var wordVM: WordViewModel
-    var level: Int = 1
-    var gems: Int = 0
+
+    private var level: Int = 1
+    private var gems: Int = 0
+    private var difficulty: Int = 0
+    private var music: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +55,7 @@ class GameActivity : AppCompatActivity() {
         }
         binding.locate.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
-            intent.putExtra("location", "")
+            intent.putExtra("location", level)
             startActivity(intent)
         }
 
@@ -78,6 +81,11 @@ class GameActivity : AppCompatActivity() {
         //words
         val allWords = assets.open("levelWords.txt").bufferedReader().use { it.readLines() }
         wordsInPicture = allWords.slice(range)
+
+        //synonym words
+        /*
+        val allSynonymWords = assets.open("levelSynonymWords.txt").bufferedReader().use { it.readLines() }
+        wordsInPicture = allSynonymWords.slice(range)*/
 
         //percentages for words
         val allWPer = assets.open("wordPercentage.txt").bufferedReader().use { it.readLines() }
@@ -170,25 +178,27 @@ class GameActivity : AppCompatActivity() {
 
     private fun giveHint()
     {
-        if(gems >= 25)
+        var value = 25
+
+        if (difficulty == 1)
+            value = 35
+
+        if(gems >= value)
         {
-            takeGems(25)
+            takeGems(value)
             val indexOfWord = wasGuessed.lastIndexOf(false)
             binding.textInputLayout.hint = (wordsInPicture[indexOfWord][0]) + " " + "_ ".repeat(wordsInPicture[indexOfWord].length - 1)
         }
         else
         {
-            Toast.makeText(applicationContext, "Not enough Gems", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Not enough Gems [required $value]", Toast.LENGTH_LONG).show()
         }
 
     }
 
-
-
     //region SharedPrefs
     private fun saveData()
     {
-
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
@@ -200,6 +210,8 @@ class GameActivity : AppCompatActivity() {
     {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         gems = sharedPreferences.getInt("Gem_KEY", 0)
+        difficulty = sharedPreferences.getInt("Diff_KEY", 0)
+        music = sharedPreferences.getInt("Music_KEY", 0)
         updateGemUI()
     }
 

@@ -41,9 +41,18 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val heart = LatLng(49.20406672057226, 18.754958861571296)
-        mMap.addMarker(MarkerOptions().position(heart).title("Marker in Uniza Heart"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(heart, 15f))
-    }
+        val position = intent.getIntExtra("location", 1)
+        var markerLocation = LatLng(49.20406672057226, 18.754958861571296)
+
+        when(position)
+        {
+            1 -> {markerLocation = LatLng(49.20144362110134, 18.75341039284054)} //chapel
+            2 -> {markerLocation = LatLng(49.20406672057226, 18.754958861571296)} //uniza heart
+            3 -> {markerLocation = LatLng(49.20416716687542, 18.755185703631298)} //rectorate
+            4 -> {markerLocation = LatLng(45.33243803162718, 14.303497361981176)} //Opatia
+        }
+        mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
+        mMap.addMarker(MarkerOptions().position(markerLocation).title("Marker"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(markerLocation, 18f))
+        }
 }
