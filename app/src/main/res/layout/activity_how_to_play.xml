@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".activity.HowToPlay">
+
+  <ImageButton
+      android:id="@+id/go_back_menu"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:background="#00FFFFFF"
+      android:contentDescription="@string/back_to_level_selector"
+      android:scaleType="fitCenter"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/return_icon"
+      tools:ignore="DuplicateClickableBoundsCheck"
+      tools:visibility="visible" />
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="80dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/mainText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="sans-serif-black"
+          android:text="@string/how_to_play_99"
+          android:textColor="#FFFFFF"
+          android:textSize="34sp" />
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:contentDescription="@string/app_name"
+          android:scaleX="3"
+          app:srcCompat="@drawable/line" />
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/_99_percent_is_primarily_about_finding_keywords_that_describe_a_picture_it_mainly_tests_the_player_s_vocabulary_or_his_recognition_of_objects_from_photography_or_even_knowledge_such_as_correct_church_name_so_the_game_takes_on_a_certain_educational_form_of_entertainment"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp" />
+
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:contentDescription="@string/app_name"
+          android:scaleX="3"
+          app:srcCompat="@drawable/line" />
+
+      <ImageView
+          android:id="@+id/imageView6"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:contentDescription="@string/app_name"
+          app:srcCompat="@drawable/gem_icon" />
+
+      <TextView
+          android:id="@+id/textView8"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/GEMS_nfor_every_guessed_word_10_gems_nfor_every_completed_level_20_gems"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp" />
+
+      <ImageView
+          android:id="@+id/imageView5"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:contentDescription="@string/app_name"
+          android:scaleX="3"
+          app:srcCompat="@drawable/line" />
+
+      <ImageView
+          android:id="@+id/imageView3"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:contentDescription="@string/app_name"
+          app:srcCompat="@drawable/diff_easy_icon" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/easy_difficulty_n_hint_costs_only_25_gems_n_there_is_one_synonym_to_guess"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp" />
+
+      <ImageView
+          android:id="@+id/imageView4"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:contentDescription="@string/app_name"
+          app:srcCompat="@drawable/diff_hard_icon" />
+
+      <TextView
+          android:id="@+id/textView7"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/hard_difficulty_n_hint_costs_35_gems_n_you_need_to_guess_exact_words"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp" />
+
+      <ImageView
+          android:id="@+id/imageView8"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:contentDescription="@string/app_name"
+          android:scaleX="3"
+          app:srcCompat="@drawable/line" />
+
+      <ImageView
+          android:id="@+id/imageView7"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:contentDescription="@string/app_name"
+          app:srcCompat="@drawable/location_icon" />
+
+      <TextView
+          android:id="@+id/textView9"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="LOCATION\nShow the place on the map"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp" />
+
+    </LinearLayout>
+  </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

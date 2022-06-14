@@ -31,22 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         wordVM = ViewModelProvider(this)[WordViewModel::class.java]
 
-        val playBtn = binding.Play
-        playBtn.setOnClickListener{
-            val intent = Intent(this, LevelSelector::class.java)
-            startActivity(intent)
-            println("click")
-        }
+
 
         val navView: NavigationView = binding.navView
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-
-        val openMenu = binding.options
-        openMenu.setOnClickListener{
-            drawerLayout.openDrawer(Gravity.LEFT)
-        }
-
-
         updateSettingsBar(navView)
 
         navView.setNavigationItemSelectedListener {
@@ -77,12 +64,29 @@ class MainActivity : AppCompatActivity() {
                     wordVM.clearDatbase()
                     saveData("gems", 0)
                 }
+                R.id.nav_about_game -> {
+                    val intent = Intent(this, HowToPlay::class.java)
+                    startActivity(intent)
+                }
             }
-
             true
         }
-
         playMusic()
+        buttons()
+    }
+
+    private fun buttons()
+    {
+        val drawerLayout: DrawerLayout = binding.drawerLayout
+        binding.options.setOnClickListener{
+            drawerLayout.openDrawer(Gravity.LEFT)
+        }
+
+        binding.Play.setOnClickListener{
+            val intent = Intent(this, LevelSelector::class.java)
+            startActivity(intent)
+            println("click")
+        }
     }
 
     //region SharedPrefs
@@ -108,6 +112,20 @@ class MainActivity : AppCompatActivity() {
         music = sharedPreferences.getInt("Music_KEY", 0)
     }
 
+
+    //endregion
+
+    private fun playMusic() {
+        var player: MediaPlayer? = null
+        if (music == 0 && player == null)
+        {
+            player = MediaPlayer.create(this, R.raw.bg_music)
+            player!!.isLooping = true
+            player.start()
+
+        }
+    }
+
     private fun updateSettingsBar(navigationView: NavigationView)
     {
         loadData()
@@ -116,8 +134,9 @@ class MainActivity : AppCompatActivity() {
         navigationView.menu.findItem(R.id.nav_diff_easy).isChecked = false
         navigationView.menu.findItem(R.id.nav_diff_hard).isChecked = false
 
-        if (music == 0)
+        if (music == 0) {
             navigationView.menu.findItem(R.id.nav_music_on).isChecked = true
+        }
         else
             navigationView.menu.findItem(R.id.nav_music_off).isChecked = true
 
@@ -125,18 +144,5 @@ class MainActivity : AppCompatActivity() {
             navigationView.menu.findItem(R.id.nav_diff_easy).isChecked = true
         else
             navigationView.menu.findItem(R.id.nav_diff_hard).isChecked = true
-    }
-
-    //endregion
-
-    private fun playMusic() {
-        val musicON = music
-        var player: MediaPlayer? = null
-        if (musicON == 0 && player == null)
-        {
-            player = MediaPlayer.create(this, R.raw.bg_music)
-            player!!.isLooping = true
-            player.start()
-        }
     }
 }

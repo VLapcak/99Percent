@@ -140,4 +140,10 @@
     <string name="reset_progress">Reset Progress</string>
     <string name="about">About</string>
     <string name="how_to_play">How to play</string>
+    <string name="filter_cards">filter_cards</string>
+    <string name="hard_difficulty_n_hint_costs_35_gems_n_you_need_to_guess_exact_words">HARD DIFFICULTY - \n- hint costs 35 Gems \n- you need to guess exact words</string>
+    <string name="easy_difficulty_n_hint_costs_only_25_gems_n_there_is_one_synonym_to_guess">EASY DIFFICULTY - \n+ hint costs only 25 Gems \n+ there is one synonym to guess</string>
+    <string name="GEMS_nfor_every_guessed_word_10_gems_nfor_every_completed_level_20_gems">For every guessed word + 10 Gems \nFor every completed level + 20 Gems</string>
+    <string name="_99_percent_is_primarily_about_finding_keywords_that_describe_a_picture_it_mainly_tests_the_player_s_vocabulary_or_his_recognition_of_objects_from_photography_or_even_knowledge_such_as_correct_church_name_so_the_game_takes_on_a_certain_educational_form_of_entertainment">99 Percent is primarily about finding keywords that describe a picture. It mainly tests the player\'s vocabulary, or his recognition of objects from photography or even knowledge such as correct church name. So the game takes on a certain educational form of entertainment.</string>
+    <string name="how_to_play_99">How to Play 99%</string>
 </resources>

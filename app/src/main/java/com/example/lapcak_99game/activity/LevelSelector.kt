@@ -26,7 +26,7 @@ class LevelSelector : AppCompatActivity() {
 
         wordVM = ViewModelProvider(this)[WordViewModel::class.java]
 
-        //add cads to recyclerView
+        //add cards to recyclerView
         pictureList = ArrayList()
         pictureList.add(Picture(R.drawable.church, "Level 1", 0, 1))
         pictureList.add(Picture(R.drawable.uniza_heart, "Level 2", 0, 2))
@@ -41,6 +41,10 @@ class LevelSelector : AppCompatActivity() {
         pictureAdapter = PictureAdapter(pictureList)
         recyclerView.adapter = pictureAdapter
 
+        buttons()
+    }
+    private fun buttons()
+    {
         pictureAdapter.onItemClick = {
             val intent = Intent(this, GameActivity::class.java)
             intent.putExtra("level", it.level)
@@ -50,6 +54,25 @@ class LevelSelector : AppCompatActivity() {
         binding.goBackLevel.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        var clicked = false
+        binding.filter.setOnClickListener {
+            if (!clicked) {
+                pictureList.sortByDescending {
+                    it.percentage
+                }
+                pictureAdapter.notifyDataSetChanged()
+                clicked = true
+            }
+            else
+            {
+                pictureList.sortBy{
+                    it.name
+                }
+                pictureAdapter.notifyDataSetChanged()
+                clicked = false
+            }
         }
     }
     private fun getPercentagesByLevel(level: Int)

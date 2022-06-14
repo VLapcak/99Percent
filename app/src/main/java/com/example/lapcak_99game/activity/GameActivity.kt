@@ -19,7 +19,8 @@ import kotlin.collections.ArrayList
 
 class GameActivity : AppCompatActivity() {
 
-    lateinit var wordsInPicture: List<String>
+    private lateinit var wordsInPicture: List<String>
+    lateinit var synonymWordsInPicture: List<String>
     lateinit var wordsPercentage: List<String>
     lateinit var guessedWords: ArrayList<TextView>
     lateinit var wasGuessed: BooleanArray
@@ -42,31 +43,35 @@ class GameActivity : AppCompatActivity() {
 
         wordVM = ViewModelProvider(this)[WordViewModel::class.java]
 
-        binding.goBack.setOnClickListener {
-            val intent = Intent(this, LevelSelector::class.java)
-            startActivity(intent)
+        guessedWords = arrayListOf(binding.text1, binding.text2, binding.text3, binding.text4, binding.text5, binding.text6, binding.text7, binding.text8, binding.text9, binding.text10)
+
+        buttons()
+        setWordData()
+
+    }
+    private fun buttons()
+    {
+        binding.hint.setOnClickListener {
+            giveHint()
         }
-        val inputText = binding.textInput
-        val sendBtn = binding.send
-        sendBtn.setOnClickListener {
-            checkForWord(inputText.text.toString())
-            inputText.setText("")
-            inputText.clearFocus()
-        }
+
         binding.locate.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             intent.putExtra("location", level)
             startActivity(intent)
         }
 
-        binding.hint.setOnClickListener {
-            giveHint()
+        val inputText = binding.textInput
+        binding.send.setOnClickListener {
+            checkForWord(inputText.text.toString())
+            inputText.setText("")
+            inputText.clearFocus()
         }
 
-        guessedWords = arrayListOf(binding.text1, binding.text2, binding.text3, binding.text4, binding.text5, binding.text6, binding.text7, binding.text8, binding.text9, binding.text10)
-
-        setWordData()
-
+        binding.goBack.setOnClickListener {
+            val intent = Intent(this, LevelSelector::class.java)
+            startActivity(intent)
+        }
     }
 
 
@@ -83,9 +88,8 @@ class GameActivity : AppCompatActivity() {
         wordsInPicture = allWords.slice(range)
 
         //synonym words
-        /*
         val allSynonymWords = assets.open("levelSynonymWords.txt").bufferedReader().use { it.readLines() }
-        wordsInPicture = allSynonymWords.slice(range)*/
+        synonymWordsInPicture = allSynonymWords.slice(range)
 
         //percentages for words
         val allWPer = assets.open("wordPercentage.txt").bufferedReader().use { it.readLines() }
@@ -105,9 +109,15 @@ class GameActivity : AppCompatActivity() {
 
     private fun checkForWord(word: String)
     {
-        val wordL = word.lowercase(Locale.getDefault())
+        var wordL = word.lowercase(Locale.getDefault())
+        if(synonymWordsInPicture.contains(wordL) && wordL != "" && difficulty == 0) // difficutly EASY advantage of synonyms
+        {
+            wordL = wordsInPicture[synonymWordsInPicture.indexOf(wordL)]
+
+        }
         if (wordsInPicture.contains(wordL) && wordL != "")
         {
+
             val indexOf = wordsInPicture.indexOf(wordL)
             if (!wasGuessed[indexOf])
             {
