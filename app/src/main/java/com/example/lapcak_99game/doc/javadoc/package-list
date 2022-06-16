@@ -1,0 +1,12 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase.Companion///PointingToDeclaration/com/example/lapcak_99game/databaseWord/WordDatabase.Companion.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem///PointingToDeclaration/com/example/lapcak_99game/placeholder/PlaceholderContent.PlaceholderItem.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder///PointingToDeclaration/com/example/lapcak_99game/recyclerView/PictureAdapter.PictureViewHolder.html
+$dokka.location:com.example.lapcak_99game/LevelItem.Companion///PointingToDeclaration/com/example/lapcak_99game/LevelItem.Companion.html
+com.example.lapcak_99game
+com.example.lapcak_99game.activity
+com.example.lapcak_99game.databaseWord
+com.example.lapcak_99game.placeholder
+com.example.lapcak_99game.recyclerView
+

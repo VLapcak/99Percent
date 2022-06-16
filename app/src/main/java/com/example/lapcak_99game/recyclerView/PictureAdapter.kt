@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lapcak_99game.R
 
 /**
- * Trieda [PictureAdapter] slúži ako adapter pre [RecyclerView]
+ * Trieda [PictureAdapter] slúži ako adapter pre [RecyclerView].
  */
 class PictureAdapter(private val pictureList: ArrayList<Picture>) : RecyclerView.Adapter<PictureAdapter.PictureViewHolder>() {
 
@@ -45,7 +45,7 @@ class PictureAdapter(private val pictureList: ArrayList<Picture>) : RecyclerView
 
     /**
      * Metóda [getItemCount]
-     * @return veľkosť listu pictureList typu [Int]
+     * @return veľkosť listu pictureList typu [Int].
      */
     override fun getItemCount(): Int {
         return pictureList.size

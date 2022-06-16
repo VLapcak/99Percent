@@ -1,0 +1,84 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.lapcak_99game.activity////PointingToDeclaration/app/com.example.lapcak_99game.activity/index.html
+$dokka.location:com.example.lapcak_99game.activity/GameActivity///PointingToDeclaration/app/com.example.lapcak_99game.activity/-game-activity/index.html
+$dokka.location:com.example.lapcak_99game.activity/GameActivity/GameActivity/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-game-activity/-game-activity.html
+$dokka.location:com.example.lapcak_99game.activity/HowToPlay///PointingToDeclaration/app/com.example.lapcak_99game.activity/-how-to-play/index.html
+$dokka.location:com.example.lapcak_99game.activity/HowToPlay/HowToPlay/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-how-to-play/-how-to-play.html
+$dokka.location:com.example.lapcak_99game.activity/HowToPlay/binding/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-how-to-play/binding.html
+$dokka.location:com.example.lapcak_99game.activity/LevelSelector///PointingToDeclaration/app/com.example.lapcak_99game.activity/-level-selector/index.html
+$dokka.location:com.example.lapcak_99game.activity/LevelSelector/LevelSelector/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-level-selector/-level-selector.html
+$dokka.location:com.example.lapcak_99game.activity/MainActivity///PointingToDeclaration/app/com.example.lapcak_99game.activity/-main-activity/index.html
+$dokka.location:com.example.lapcak_99game.activity/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-main-activity/-main-activity.html
+$dokka.location:com.example.lapcak_99game.activity/MapActivity///PointingToDeclaration/app/com.example.lapcak_99game.activity/-map-activity/index.html
+$dokka.location:com.example.lapcak_99game.activity/MapActivity/MapActivity/#/PointingToDeclaration/app/com.example.lapcak_99game.activity/-map-activity/-map-activity.html
+$dokka.location:com.example.lapcak_99game.activity/MapActivity/onMapReady/#com.google.android.gms.maps.GoogleMap/PointingToDeclaration/app/com.example.lapcak_99game.activity/-map-activity/on-map-ready.html
+$dokka.location:com.example.lapcak_99game.databaseWord////PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word/Word/#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/-word.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word/id/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/id.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word/level/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/level.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word/percentage/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/percentage.html
+$dokka.location:com.example.lapcak_99game.databaseWord/Word/word/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word/word.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDao///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-dao/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDao/addWord/#com.example.lapcak_99game.databaseWord.Word/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-dao/add-word.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDao/clear/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-dao/clear.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDao/getAllWords/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-dao/get-all-words.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDao/getWordsByLevel/#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-dao/get-words-by-level.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase.Companion///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-database/-companion/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase.Companion/getDatabase/#android.content.Context/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-database/-companion/get-database.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-database/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase/WordDatabase/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-database/-word-database.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordDatabase/wordDao/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-database/word-dao.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository/WordRepository/#com.example.lapcak_99game.databaseWord.WordDao/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/-word-repository.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository/addWord/#com.example.lapcak_99game.databaseWord.Word/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/add-word.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository/clearDatabase/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/clear-database.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository/getAllWords/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/get-all-words.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordRepository/getAllWordsByLvl/#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-repository/get-all-words-by-lvl.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordViewModel///PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-view-model/index.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordViewModel/WordViewModel/#android.app.Application/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-view-model/-word-view-model.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordViewModel/addWord/#com.example.lapcak_99game.databaseWord.Word/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-view-model/add-word.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordViewModel/clearDatabase/#/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-view-model/clear-database.html
+$dokka.location:com.example.lapcak_99game.databaseWord/WordViewModel/getAllWByLvl/#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.databaseWord/-word-view-model/get-all-w-by-lvl.html
+$dokka.location:com.example.lapcak_99game.placeholder////PointingToDeclaration/app/com.example.lapcak_99game.placeholder/index.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem///PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/index.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem/PlaceholderItem/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/-placeholder-item.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem/content/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/content.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem/details/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/details.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem/id/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/id.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent.PlaceholderItem/toString/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-placeholder-item/to-string.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent///PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/index.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent/ITEMS/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-i-t-e-m-s.html
+$dokka.location:com.example.lapcak_99game.placeholder/PlaceholderContent/ITEM_MAP/#/PointingToDeclaration/app/com.example.lapcak_99game.placeholder/-placeholder-content/-i-t-e-m_-m-a-p.html
+$dokka.location:com.example.lapcak_99game.recyclerView////PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/index.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture///PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/index.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture/Picture/#kotlin.Int#kotlin.String#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/-picture.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture/image/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/image.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture/level/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/level.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture/name/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/name.html
+$dokka.location:com.example.lapcak_99game.recyclerView/Picture/percentage/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture/percentage.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder///PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-view-holder/index.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder/PictureViewHolder/#android.view.View/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-view-holder/-picture-view-holder.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder/imageView/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-view-holder/image-view.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder/percProgress/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-view-holder/perc-progress.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter.PictureViewHolder/textView/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-view-holder/text-view.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter///PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/index.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter/PictureAdapter/#java.util.ArrayList[com.example.lapcak_99game.recyclerView.Picture]/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/-picture-adapter.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter/getItemCount/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/get-item-count.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter/onBindViewHolder/#com.example.lapcak_99game.recyclerView.PictureAdapter.PictureViewHolder#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/on-bind-view-holder.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter/onCreateViewHolder/#android.view.ViewGroup#kotlin.Int/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/on-create-view-holder.html
+$dokka.location:com.example.lapcak_99game.recyclerView/PictureAdapter/onItemClick/#/PointingToDeclaration/app/com.example.lapcak_99game.recyclerView/-picture-adapter/on-item-click.html
+$dokka.location:com.example.lapcak_99game////PointingToDeclaration/app/com.example.lapcak_99game/index.html
+$dokka.location:com.example.lapcak_99game/LevelItem.Companion///PointingToDeclaration/app/com.example.lapcak_99game/-level-item/-companion/index.html
+$dokka.location:com.example.lapcak_99game/LevelItem.Companion/newInstance/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.lapcak_99game/-level-item/-companion/new-instance.html
+$dokka.location:com.example.lapcak_99game/LevelItem///PointingToDeclaration/app/com.example.lapcak_99game/-level-item/index.html
+$dokka.location:com.example.lapcak_99game/LevelItem/LevelItem/#/PointingToDeclaration/app/com.example.lapcak_99game/-level-item/-level-item.html
+$dokka.location:com.example.lapcak_99game/LevelItem/onCreate/#android.os.Bundle?/PointingToDeclaration/app/com.example.lapcak_99game/-level-item/on-create.html
+$dokka.location:com.example.lapcak_99game/LevelItem/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup?#android.os.Bundle?/PointingToDeclaration/app/com.example.lapcak_99game/-level-item/on-create-view.html
+com.example.lapcak_99game
+com.example.lapcak_99game.activity
+com.example.lapcak_99game.databaseWord
+com.example.lapcak_99game.placeholder
+com.example.lapcak_99game.recyclerView
+

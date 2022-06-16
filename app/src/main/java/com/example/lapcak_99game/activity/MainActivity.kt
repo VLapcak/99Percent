@@ -144,8 +144,6 @@ class MainActivity : AppCompatActivity() {
         difficulty = sharedPreferences.getInt("Diff_KEY", 0)
         music = sharedPreferences.getInt("Music_KEY", 0)
     }
-
-
     //endregion
 
     /**

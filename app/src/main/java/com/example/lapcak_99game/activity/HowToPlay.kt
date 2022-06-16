@@ -11,7 +11,7 @@ import com.example.lapcak_99game.databinding.ActivityHowToPlayBinding
  * Hráč sa tu dozvie:
  * - ako fungujú dané obtiažnosti
  * - ako funguje herná mena Gemy
- * - ako funguje poloha
+ * - ako funguje poloha.
  */
 class HowToPlay : AppCompatActivity() {
 
