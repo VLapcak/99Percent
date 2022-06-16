@@ -12,6 +12,12 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.lapcak_99game.databinding.ActivityMapBinding
 
+/**
+ * Trieda [MapActivity] má za úlohu spojiť užívateľa s Google play službami.
+ * Pomocou Google máp môže ukázať užívateľovi polohu daného objektu na mapách.
+ * Kostra triedy vygenerovaná pomocou šablóny Google Maps Activity.
+ */
+
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
@@ -32,11 +38,12 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
+     * This is where we can add markers or lines, add listeners or move the camera.
      * If Google Play services is not installed on the device, the user will be prompted to install
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
+     * Na základe získaných súradníc z triedy [GameActivity], zobrazia Google mapy polohu objektu
+     * vyzobrazenú markerom.
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap

@@ -14,13 +14,16 @@ import com.example.lapcak_99game.databaseWord.WordViewModel
 import com.example.lapcak_99game.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
+/**
+ * Trieda [MainActivity] je prvá, ktorá sa zobrazí pri otvorení aplikácie.
+ * Zabezpečí tak hlavnú obrazovku, z ktorej je možné sa navigovať do iných obrazoviek.
+ */
 class MainActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var wordVM: WordViewModel
+    private lateinit var wordVM: WordViewModel
 
-    //private var gems: Int = 0
     private var difficulty: Int = 0
     private var music: Int = 0
 
@@ -31,21 +34,40 @@ class MainActivity : AppCompatActivity() {
 
         wordVM = ViewModelProvider(this)[WordViewModel::class.java]
 
+        sidePanel()
+        playMusic()
+        buttons()
+    }
 
-
+    /**
+     * Metóda [sidePanel] inicializuje bočný panel nastavení.
+     * Volá metódu [updateSettingsBar] pre získanie aktuálnych informácii.
+     * Pre hráča to znamená že môže si zvoliť obtiažnosť,
+     * vypnutie/ zapnutie hudby v pozadí,
+     * resetovanie progresu,
+     * informácie ako hrať.
+     */
+    private fun sidePanel() {
         val navView: NavigationView = binding.navView
         updateSettingsBar(navView)
 
         navView.setNavigationItemSelectedListener {
-            when(it.itemId)
-            {
+            when (it.itemId) {
                 R.id.nav_diff_easy -> {
-                    Toast.makeText(applicationContext, "Easy difficulty selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        applicationContext,
+                        "Easy difficulty selected",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     saveData("difficulty", 0)
                     updateSettingsBar(navView)
                 }
                 R.id.nav_diff_hard -> {
-                    Toast.makeText(applicationContext, "Hard difficulty selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        applicationContext,
+                        "Hard difficulty selected",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     saveData("difficulty", 1)
                     updateSettingsBar(navView)
                 }
@@ -61,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_resetProgress -> {
                     Toast.makeText(applicationContext, "Progress Reset", Toast.LENGTH_SHORT).show()
-                    wordVM.clearDatbase()
+                    wordVM.clearDatabase()
                     saveData("gems", 0)
                 }
                 R.id.nav_about_game -> {
@@ -71,10 +93,13 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        playMusic()
-        buttons()
     }
 
+    /**
+     * Metóda [buttons] inicializuje talčidlá v triede.
+     * Tlačidlo Options otvára bočný panel nastavení zľava.
+     * Tlačidlo Play zabezpečí presunutie do triedy [LevelSelector].
+     */
     private fun buttons()
     {
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -90,6 +115,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     //region SharedPrefs
+    /**
+     * Metóda [saveData] slúži na ukladanie dát pre ich zachovanie aj po ukončení aplikácie.
+     * @param prefsName názov do ktorej má uložiť hodnotu.
+     * @param value hodnota, ktorá sa zapíše do kľúča s daným názvom.
+     */
     private fun saveData(prefsName: String, value: Int)
     {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
@@ -103,11 +133,14 @@ class MainActivity : AppCompatActivity() {
             else -> println("error has occurred")
         }
     }
-
+    /**
+     * Metóda [loadData] slúži na načítanie dát.
+     * [difficulty] prepíše na aktulánu hodnotu (0 = EASY, 1 = HARD).
+     * [music] prepíše na aktuálnu hodnotu (0 = ON, 1 = OFF).
+     */
     private fun loadData()
     {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        //gems = sharedPreferences.getInt("Gem_KEY", 0)
         difficulty = sharedPreferences.getInt("Diff_KEY", 0)
         music = sharedPreferences.getInt("Music_KEY", 0)
     }
@@ -115,6 +148,10 @@ class MainActivity : AppCompatActivity() {
 
     //endregion
 
+    /**
+     * Metóda [playMusic] overí či existuje [MediaPlayer] a v prípade,
+     * že [music] je nastavený na ON (0), tak spustí hudbu.
+     */
     private fun playMusic() {
         var player: MediaPlayer? = null
         if (music == 0 && player == null)
@@ -126,6 +163,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Metóda [updateSettingsBar] zavolá funkciu [loadData] pre získanie aktuálnych hodnôt.
+     * @param navigationView sprístupní [NavigationView] vďaka, ktorému sa zabezpečí
+     * mannipulácia s jednotlivými položkami v bočnom paneli nastavení.
+     * Prebieha kontrola zvýraznenia(označenia) položiek.
+     */
     private fun updateSettingsBar(navigationView: NavigationView)
     {
         loadData()

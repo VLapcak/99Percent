@@ -1,4 +1,4 @@
-package com.example.lapcak_99game.RecyclerView
+package com.example.lapcak_99game.recyclerView
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,17 +9,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lapcak_99game.R
 
-
+/**
+ * Trieda [PictureAdapter] slúži ako adapter pre [RecyclerView]
+ */
 class PictureAdapter(private val pictureList: ArrayList<Picture>) : RecyclerView.Adapter<PictureAdapter.PictureViewHolder>() {
 
     var onItemClick: ((Picture) -> Unit)? = null
 
+    /**
+     * Trieda [PictureViewHolder] priamo naväzuje na grafické prvky cez [View]
+     * pomocou ikony, textu a progres baru karty.
+     */
     class PictureViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         val imageView: ImageView = itemView.findViewById(R.id.iconCard)
         val textView: TextView = itemView.findViewById(R.id.textCard)
         val percProgress: ProgressBar = itemView.findViewById(R.id.progressBCard)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PictureViewHolder {
@@ -38,6 +43,10 @@ class PictureAdapter(private val pictureList: ArrayList<Picture>) : RecyclerView
         }
     }
 
+    /**
+     * Metóda [getItemCount]
+     * @return veľkosť listu pictureList typu [Int]
+     */
     override fun getItemCount(): Int {
         return pictureList.size
     }
